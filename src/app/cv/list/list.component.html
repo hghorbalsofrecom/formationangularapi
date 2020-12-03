@@ -1,0 +1,14 @@
+<ol class="list-group">
+  <li
+    *ngFor="let actualPersonne of personnes; let isEven = even"
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-danger': isEven,
+      'list-group-item-warning': !isEven
+    }"
+  >
+    <app-item
+      [personne]="actualPersonne"
+    ></app-item>
+  </li>
+</ol>

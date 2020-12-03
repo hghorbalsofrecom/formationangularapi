@@ -1,0 +1,23 @@
+<p>color works!</p>
+
+<input
+  (change)="changeColor(inputColor.value)"
+  #inputColor
+type="text" class="form-control">
+<div [style.backgroundColor]="color">
+  Bonjour
+</div>
+
+<input type="color" class="form-control"  [(ngModel)]="color">
+<button
+  (click)="reset()"
+  class="btn btn-dark">
+  Reset
+</button>
+
+<button
+  (click)="goToTodo()"
+>
+  Go To Todo
+</button>
+
